@@ -10,68 +10,70 @@
         <table width="100%" height="100%">
             <tr>
                 <td align="center" valign="middle">
-                    <h1>Форма для додавання викладача</h1>
                     <form>
-                        <label for="fullname">Повне ім'я:</label>
-                        <input type="text" id="name" name="name" placeholder="Іван Іваненко" required>
-                    </form>
-                    <br>
-                    <form>
-                        <label for="email">Електронна пошта:</label>
-                        <input type="email" id="email" name="email" placeholder="ivan.ivanenko@gmail.com" required>
-                    </form>
-                    <br>
-                    <form>
-                        <label for="phone">Номер телефону:</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+380 975 164 398" required>
-                    </form>
-                    <br>
-                    <div>
-                        <label for="gender">Стать: чоловіча</label>
-                        <select id="gender" name="gender" required>
-                          <option value="">Оберіть стать</option>
-                          <option value="male">Чоловіча</option>
-                          <option value="female">Жіноча</option>
-                          <option value="other">Інше</option>
-                        </select>
-                    </div>
-                    <br>
-                    <form>
-                        <label for="birthdate">Дата народження:</label>
-                        <input type="date" id="birthdate" name="birthdate">
-                    </form>
-                    <br>
-                    <form>
-                        <label for="bgcolor">Колір фону:</label>
-                        <select name="bgcolor" id="color">
-                            <option value="green">green</option>
-                            <option value="yellow">yellow</option>
-                            <option value="white">white</option>
-                            <option value="blue">blue</option>
-                            <option value="pink">pink</option>
-                        </select>
-                    </form>
-                    <br>
-                    <form><label for="mapLabel">Місце проживання:</label></form>
-                    <br>
-                    <form>
-                        <label for="country">Країна:</label>
-                        <input type="text" id="country" name="country" placeholder="Україна">
-                    </form>
-                    <br>
-                    <form>
-                        <label for="city">Місто:</label>
-                        <input type="text" id="city" name="city" placeholder="Київ">
-                    </form>
-                    <br>
-                    <form>
-                        <label for="message">Коментар:</label>
+                        <h1>Форма для додавання викладача</h1>
+                        <section>
+                            <label for="fullname">Повне ім'я:</label>
+                            <input type="text" id="name" name="name" placeholder="Іван Іваненко" required>
+                        </section>
                         <br>
-                        <textarea id="message" name="message" rows="4" cols="40" placeholder="Люблю Києво-Могилянську академію <3"></textarea>
+                        <section>
+                            <label for="email">Електронна пошта:</label>
+                            <input type="email" id="email" name="email" placeholder="ivan.ivanenko@gmail.com" required>
+                        </section>
+                        <br>
+                        <section>
+                            <label for="phone">Номер телефону:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+380 975 164 398" required>
+                        </section>
+                        <br>
+                        <section>
+                            <label for="gender">Стать:</label>
+                            <select id="gender" name="gender" required>
+                            <option value="">Оберіть стать</option>
+                            <option value="male">Чоловіча</option>
+                            <option value="female">Жіноча</option>
+                            <option value="other">Інше</option>
+                            </select>
+                        </section>
+                        <br>
+                        <section>
+                            <label for="birthdate">Дата народження:</label>
+                            <input type="date" id="birthdate" name="birthdate">
+                        </section>
+                        <br>
+                        <section>
+                            <label for="bgcolor">Колір фону:</label>
+                            <select name="bgcolor" id="color">
+                                <option value="green">green</option>
+                                <option value="yellow">yellow</option>
+                                <option value="white">white</option>
+                                <option value="blue">blue</option>
+                                <option value="pink">pink</option>
+                            </select>
+                        </section>
+                        <br>
+                        <section><label for="mapLabel">Місце проживання:</label></section>
+                        <br>
+                        <section>
+                            <label for="country">Країна:</label>
+                            <input type="text" id="country" name="country" placeholder="Україна">
+                        </section>
+                        <br>
+                        <section>
+                            <label for="city">Місто:</label>
+                            <input type="text" id="city" name="city" placeholder="Київ">
+                        </section>
+                        <br>
+                        <section>
+                            <label for="message">Коментар:</label>
+                            <br>
+                            <textarea id="message" name="message" rows="4" cols="40" placeholder="Люблю Києво-Могилянську академію"></textarea>
+                        </section>
+                        <br>
+                        <button type="reset">Скинути</button>
+                        <button type="submit">Надіслати</button> 
                     </form>
-                    <br>
-                    <input type="reset" value="Reset">
-                    <input type="submit" value="Submit"> 
                 </td>
             </tr>
         </table>    
