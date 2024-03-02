@@ -1,0 +1,346 @@
+body {
+	background-color: rgb(163, 163, 163);
+	margin: 0px;
+	min-height: 100vh;
+	box-sizing: border-box;
+}
+
+.container {
+	display: flex;
+}
+
+.products, .cart {
+	background: white;
+	border: 1px solid #e2e2e2; 
+	min-height: 269px;
+	height: 302.4px;
+	margin-top: 5vh;
+	float: left;
+	box-sizing: border-box;
+	border-radius: 5px;
+}
+
+.products {
+	width: 50vw;
+	min-width: 450px;
+	margin-left: 1vw;
+	margin-right: 1.5vw;
+	
+}
+
+.cart {
+	width: 45vw;
+	min-width: 200px;
+	margin-left: 1.5vw;
+	margin-right: 1vw;
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+
+	.products {
+		margin: 2vh 1vw;
+		width: auto;
+	}
+	input[type="text"]{
+		width: auto;
+	}
+
+	#search-button {
+		width: auto;
+	}
+    
+    .cart {
+        margin: 2vh 1vw;
+		margin-bottom: 6vh;
+        width: auto;
+		min-width: 450px;
+    }
+}
+
+.add-product-container {
+	height: 69px;
+	margin: 0.25vh auto;
+	display: flex;
+	align-items: center;
+	padding: 2vh 1.5vh 2vh 1.5vh;
+	/* border-bottom: 2px solid #e2e2e2; */
+}
+  
+input[type="text"] {
+	width: 77%;
+	height: 30px;
+	padding: 8px; 
+	border: 1px solid #e2e2e2; 
+	font-size: 16px; 
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+  
+#add-product-button {
+	width: 20%;
+	min-width: 80px;
+	height: 47.6px;
+	padding: 8px; 
+	background: rgb(67, 158, 210);
+	border-bottom: 5px solid rgb(47, 129, 188);
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	font-size: 16px;
+	font-weight: bold;
+	align-content: center;
+	color: white;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	justify-content: center; 
+	line-height: 1;
+}
+
+.product-option, .product-option-cart{
+	display: flex;
+	align-items: center;
+	height: 50px;
+	padding: 7px 10px;
+	border-top: 2px solid #e2e2e2;
+	font-style: normal;
+	font-family: Arial;
+	font-size: 16px;
+}
+
+.product-option-cart{
+	height: 60px;
+}
+
+div[display-attribute="no-border"]{
+	border: none;
+}
+
+.product-name {
+	width: 10vw;
+	min-width: 114px;
+	padding: 0px 8px;
+}
+
+.buy-unbuy {
+	width: 11.3vw;
+	min-width: 130px;
+	display: flex;
+	align-items: center;
+}
+
+.options {
+	flex-grow: 1;
+    display: flex;
+    justify-content: center;
+	align-content: center;
+	justify-content: center; 
+	text-align: center;
+	font-style: normal;
+	font-size: 15px;
+	font-family: Arial;
+}
+
+.not-bought, .bought, .cancel-button {
+	margin-left: auto;
+	width: 90px;
+	min-height: 12.5px;
+	background: hsl(0, 0%, 93%);
+	padding: 8px; 
+	height: 36px;
+	border-bottom: 4px solid lightgray;
+	border-top: 2px solid lightgray;
+	border-left: 2px solid lightgray;
+	border-right: 2px solid lightgray;
+	font-size: 16px;
+	font-weight: bold;
+	align-content: right;
+	color: rgb(70, 70, 70);
+	border-radius: 5px;
+	justify-content: right; 
+	line-height: 1;
+}
+
+.not-bought{
+	width: 10vw;
+	min-width: 113px;
+	
+}
+
+.bought {
+	min-width: 90px;
+}
+
+input[type="text"].personal-option {
+	width: 10vw;
+	height: 1.5vh;
+	padding: 7.2px;
+	min-width: 114px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.cancel-button {
+	width: 36px;
+	min-width: 36px; 
+	min-height: 36px;
+	margin-left: 5px;
+	color: white;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	background: rgb(225, 0, 0);
+	border-color: rgb(190, 1, 1);
+}
+
+.amount {
+	background-color:lightgray;
+	border-radius: 3px;
+	color: rgb(99, 99, 99);
+	display: inline-block;
+	padding: 4px;
+	height: 20px;
+	width: 20px;
+}
+
+.add-item, .remove-item {
+	height: 30px;
+	width: 30px;
+	border-radius: 15px;
+	margin: 0 4px;
+	font-size: 20px;
+	color: white;
+	border-bottom: 3px solid;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+div[data-attribute="sold"] .add-item, div[data-attribute="sold"] .remove-item{
+	display: none;
+}
+
+div[data-attribute="sold"] .product-name {
+	text-decoration: line-through;
+}
+
+div[amount-attribute="more-than-one"] .remove-item{
+	opacity: 0.5;
+}
+
+.remove-item {
+	background: rgb(225, 0, 0);
+	border-color: rgb(190, 1, 1);
+}
+
+.add-item {
+	background: rgb(1, 149, 1);
+	border-color: darkgreen;
+}
+
+
+.product-item {
+    background-color: rgba(221, 221, 221, 0.941);
+    display: flex; 
+    align-items: center; 
+    height: 25px;
+    padding: 5px;
+    color: rgb(70, 70, 70);
+    font-weight: bolder;
+	font-size: 12px;
+    justify-content: center;
+    line-height: 1;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+
+.amount-in-cart {
+	margin-left: 2px;
+    background-color: orange;
+	color: white;
+    border-radius: 10px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 20px;
+	font-size: 12px;
+    text-align: center;
+    font-weight: bold; 
+}
+
+.badge {
+	width: 100px;
+	height: 200px;
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+	border: 2px solid darkviolet;
+    background-color: darkviolet;
+    color: white;
+    font-weight: bold;
+    padding: 0px 20px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    transition: transform 1s, background-color 1s;
+    transform: translateY(90%);
+}
+
+.badge:hover {
+    transform: translateY(100px);
+    background-color: rgb(0, 115, 172);
+}
+
+@media print {
+    .badge {
+        transform: translateY(100px) !important;
+        background-color: rgb(0, 115, 172) !important;
+    }
+	h3 { 
+		display: none;
+	}
+}
+
+
+.created-by {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+.author-name {
+	margin-top: 5px;
+	padding-top: 0px;
+}
+
+button:hover::after {
+	visibility: visible;
+	opacity: 1;
+	transform: translateX(-50%) translateY(-10px);
+  }
+
+
+  button {
+	position: relative;
+  }
+  
+  button::after {
+	content: attr(data-tooltip);
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 5px;
+	border-radius: 5px;
+	background-color: violet;
+	color: white;
+	font-size: 12px;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0.3s, opacity 0.3s, transform 0.3s;
+  }
+  
+  
+

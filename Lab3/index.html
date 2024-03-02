@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="uk">
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+
+    <link rel="stylesheet" type="text/css" href="main.css" />
+	<script src="javascript.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="products" id="products">
+			<div class="add-product-container">
+				<input type="text" class="name-text-field" id="product-name-textfield" placeholder="Назва товару">
+				<button type="submit" class="add-button" id="add-product-button" data-tooltip="Додати продукт">Додати</button>
+			</div>
+			<div class="product-option" id="product-option" name="Помідори" data-attribute="sold">
+				<p class="product-name" id="product-name">Помідори</p>
+				<section class="options" id="options">
+					<button type="button" class="remove-item" id="remove-item" data-tooltip="Зменшити кількість">-</button>
+					<span class="amount">2</span>
+					<button type="button" class="add-item" id="add-item" data-tooltip="Збільшити кількість">+</button>
+				</section>
+				<section class="buy-unbuy" id="buy-unbuy">
+					<button type="button" class="not-bought" id="not-bought" data-tooltip="Відмінити покупку">Не куплено</button>
+				</section>
+			</div>
+			<div class="product-option" id="product-option" name="Печиво" data-attribute="not-sold">
+				<p class="product-name" id="product-name">Печиво</p>
+				<section class="options" id="options">
+					<button type="button" class="remove-item" id="remove-item" data-tooltip="Зменшити кількість">-</button>
+					<span class="amount">2</span>
+					<button type="button" class="add-item" id="add-item" data-tooltip="Збільшити кількість">+</button>
+				</section>
+				<section class="buy-unbuy" id="buy-unbuy">
+					<button type="button" class="bought" id="bought" data-tooltip="Купити">Куплено</button>
+					<button type="reset" class="cancel-button" id="reset" data-tooltip="Видалити продукт">x</button>
+				</section>
+			</div>
+			<div class="product-option" id="product-option" name="Сир" data-attribute="not-sold" amount-attribute="more-than-one">
+				<p class="product-name" id="product-name">Сир</p>
+				<section class="options" id="options">
+					<button type="button" class="remove-item" id="remove-item" data-tooltip="Зменшити кількість">-</button>
+					<span class="amount">1</span>
+					<button type="button" class="add-item" id="add-item" data-tooltip="Збільшити кількість">+</button>
+				</section>
+				<section class="buy-unbuy" id="buy-unbuy">
+					<button type="button" class="bought" id="bought" data-tooltip="Купити">Куплено</button>
+					<button type="reset" class="cancel-button" id="reset" data-tooltip="Видалити продукт">x</button>
+				</section>
+			</div>
+		</div>
+
+		<div class="cart" id="cart">
+			<div class="product-option-cart" id="product-option" display-attribute="no-border">
+				<h1 class="products-left" id="products-left">Залишилося</h1>
+			</div>
+			<div class="product-option-cart" id="remaining-products-basket">
+				<span class="product-item" id="Печиво">
+					<p class="Печиво">Печиво</p>
+					<span class="amount-in-cart">2</span>
+				</span>
+				<span class="product-item" id="Сир">
+					<p class="Сир">Сир</p>
+					<span class="amount-in-cart">1</span>
+				</span>
+			</div>
+			<div class="product-option-cart" id="product-option">
+				<h1 class="products-bought" id="products-bought">Куплено</h1>
+			</div>
+			<div class="product-option-cart" id="bought-products-basket">
+				<span class="product-item" id="Помідори">
+					<p class="Помідори">Помідори</p>
+					<span class="amount-in-cart">2</span>
+				</span>
+			</div>
+		</div>
+		<div class="badge">
+			<h3>Buy List</h3>
+			<h5 class="created-by">Created by:</h5>
+			<h4 class="author-name">Max Loshak</h4>
+		</div>
+	</div>
+</body>
+</html>
